@@ -1,0 +1,36 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="MyTimeSheet.DetailControl" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" Width="600">
+    <Canvas x:Name="DetailCanvas">
+        <TextBox  x:Name="NumberTextBox" Height="30" Width="60" Text="{Binding Number}" FontFamily="Microsoft YaHei" FontSize="18.667" FontWeight="Bold" Canvas.Left="30" KeyDown="NumberTextBox_KeyDown" />
+        <TextBox x:Name="MessageTextBox" Text="{Binding Message}" Height="30" Width="400" TextWrapping="Wrap" Canvas.Left="90"/>
+        <TextBox x:Name="HoursTextBox" Text="{Binding Hours}" Height="30" Width="60" Canvas.Left="490" FontFamily="Microsoft YaHei" FontSize="18.667" FontWeight="Bold" KeyDown="HoursTextBox_KeyDown" />
+        <ed:RegularPolygon Fill="#FF0000E4" Height="30" InnerRadius="1" PointCount="3" Stretch="Fill" Stroke="#FF0000E4" Width="30" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-1" Canvas.Left="550">
+        	<ed:RegularPolygon.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform Angle="90"/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</ed:RegularPolygon.RenderTransform>
+        </ed:RegularPolygon>
+        <ed:RegularPolygon Fill="#FF0000E4" Height="30" InnerRadius="1" Canvas.Left="0" PointCount="3" Stretch="Fill" Stroke="#FF0000E4" Width="30" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-1">
+        	<ed:RegularPolygon.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform Angle="-90"/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</ed:RegularPolygon.RenderTransform>
+        </ed:RegularPolygon>
+       
+
+    </Canvas>
+</UserControl>

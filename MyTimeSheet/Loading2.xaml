@@ -1,0 +1,9 @@
+﻿<Window x:Class="MyTimeSheet.Loading2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:GifImageLib="clr-namespace:GifImageLib;assembly=GifImageLib"
+        Height="150" Width="150" WindowStyle="None" Background="Transparent" AllowsTransparency="True" ShowInTaskbar="False">
+    <Canvas>
+        <GifImageLib:GifImage Name="loadingPic" Source="imgs\loading5.gif" Height="80" Width="80" Canvas.Left="25" />
+    </Canvas>
+</Window>

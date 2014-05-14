@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TimeSheetService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://msnbc-cn2web1:6666/TimeSheetService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://msnbc-cn2web1:6666/TimeSheetService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://msnbc-cn2web1:6666/TimeSheetService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITimeSheetService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_UpdateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_UpdateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_GetDetailData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailData" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_GetDetailData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_SubmitData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitData" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_SubmitData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_UpdateDetailData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDetailData" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_UpdateDetailData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDetailDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_DeleteDetailDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDetailDate" />
+  </wsdl:message>
+  <wsdl:message name="ITimeSheetService_DeleteDetailDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDetailDateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITimeSheetService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimeSheetService/GetData" message="tns:ITimeSheetService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimeSheetService/GetDataResponse" message="tns:ITimeSheetService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimeSheetService/UpdateData" message="tns:ITimeSheetService_UpdateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimeSheetService/UpdateDataResponse" message="tns:ITimeSheetService_UpdateData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimeSheetService/GetDetailData" message="tns:ITimeSheetService_GetDetailData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimeSheetService/GetDetailDataResponse" message="tns:ITimeSheetService_GetDetailData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimeSheetService/SubmitData" message="tns:ITimeSheetService_SubmitData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimeSheetService/SubmitDataResponse" message="tns:ITimeSheetService_SubmitData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDetailData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimeSheetService/UpdateDetailData" message="tns:ITimeSheetService_UpdateDetailData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimeSheetService/UpdateDetailDataResponse" message="tns:ITimeSheetService_UpdateDetailData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDetailDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITimeSheetService/DeleteDetailDate" message="tns:ITimeSheetService_DeleteDetailDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITimeSheetService/DeleteDetailDateResponse" message="tns:ITimeSheetService_DeleteDetailDate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITimeSheetService" type="tns:ITimeSheetService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/ITimeSheetService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <soap:operation soapAction="http://tempuri.org/ITimeSheetService/UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailData">
+      <soap:operation soapAction="http://tempuri.org/ITimeSheetService/GetDetailData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitData">
+      <soap:operation soapAction="http://tempuri.org/ITimeSheetService/SubmitData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDetailData">
+      <soap:operation soapAction="http://tempuri.org/ITimeSheetService/UpdateDetailData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDetailDate">
+      <soap:operation soapAction="http://tempuri.org/ITimeSheetService/DeleteDetailDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TimeSheetService">
+    <wsdl:port name="BasicHttpBinding_ITimeSheetService" binding="tns:BasicHttpBinding_ITimeSheetService">
+      <soap:address location="http://msnbc-cn2web1:6666/TimeSheetService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
